@@ -42,6 +42,12 @@
   color: var(--accent);
 }
 
+.cardsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -409,6 +415,44 @@
   font-size: 0.9rem;
 }
 
+/* ── Dashboard iframe ── */
+.iframePreview {
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  background: var(--bg-primary);
+}
+
+.iframeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.chartIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--accent-dim);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dashboardIframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  display: block;
+}
+
 @media (max-width: 600px) {
   .card {
     padding: 1.5rem;
@@ -417,5 +461,9 @@
   .messageBubble {
     max-width: 90%;
     font-size: 0.83rem;
+  }
+
+  .dashboardIframe {
+    height: 340px;
   }
 }

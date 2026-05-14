@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from './Navbar.module.css'
 
 const links = [
@@ -9,20 +9,13 @@ const links = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
+    <nav className={styles.nav}>
       <div className={styles.inner}>
         <a href="#" className={styles.logo}>
-          DJT<span className={styles.dot}>.</span>
+          Donavan Jax Thegenus
         </a>
 
         <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>

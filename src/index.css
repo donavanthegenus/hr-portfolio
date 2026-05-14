@@ -5,16 +5,17 @@
 }
 
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #0a0a0a;
-  --bg-card: #1a1a1a;
-  --accent: #F59E0B;
-  --accent-dim: rgba(245, 158, 11, 0.08);
-  --text-primary: #ffffff;
-  --text-secondary: #a3a3a3;
-  --text-muted: #525252;
-  --border-subtle: rgba(255, 255, 255, 0.07);
-  --border-amber: rgba(245, 158, 11, 0.45);
+  --bg-light: #eeeeee;
+  --bg-lighter: #f7f7f7;
+  --bg-dark: #1f6f5f;
+  --accent: #6fcf97;
+  --teal: #2fa084;
+  --text-dark: #1a1a1a;
+  --text-mid: #444444;
+  --text-muted: #777777;
+  --text-light: #eeeeee;
+  --text-light-muted: rgba(238, 238, 238, 0.65);
+  --divider: rgba(0, 0, 0, 0.1);
 }
 
 html {
@@ -23,8 +24,8 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
+  background: var(--bg-lighter);
+  color: var(--text-dark);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,13 +36,13 @@ body {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: var(--bg-light);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--text-muted);
+  background: var(--teal);
 }
 
 ::selection {
   background: var(--accent);
-  color: #000;
+  color: var(--bg-dark);
 }

@@ -1,18 +1,16 @@
 .contact {
-  padding: 7rem 0;
-  background: var(--bg-primary);
-  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-dark);
+  padding: 8rem 0;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 3rem;
-  text-align: center;
 }
 
 .sectionLabel {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -22,117 +20,85 @@
 
 .heading {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  margin-bottom: 1.25rem;
+  line-height: 1.1;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
 }
 
-.accent {
-  color: var(--accent);
+.heading em {
   font-style: italic;
 }
 
-.subheading {
-  color: var(--text-secondary);
+.sub {
   font-size: 1rem;
   line-height: 1.8;
-  max-width: 560px;
-  margin: 0 auto 3rem;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  color: var(--text-light-muted);
+  max-width: 520px;
   margin-bottom: 2.5rem;
 }
 
-.contactCard {
+.actions {
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  padding: 1.75rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.btnWhite {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--text-light);
+  color: var(--text-light);
   text-decoration: none;
-  text-align: left;
-  transition: border-color 0.25s;
-}
-
-.contactCard:hover {
-  border-color: var(--border-amber);
-}
-
-.contactIcon {
-  width: 44px;
-  height: 44px;
-  background: var(--accent-dim);
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.contactInfo {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.contactLabel {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.contactValue {
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  color: var(--text-primary);
+  letter-spacing: 0.04em;
+  transition: background 0.2s, color 0.2s;
 }
 
-.contactArrow {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  transition: color 0.2s, transform 0.2s;
+.btnWhite:hover {
+  background: var(--text-light);
+  color: var(--bg-dark);
 }
 
-.contactCard:hover .contactArrow {
-  color: var(--accent);
-  transform: translate(2px, -2px);
+.btnTeal {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btnTeal:hover {
+  background: var(--teal);
+  color: var(--text-light);
 }
 
 .availability {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.82rem;
-  color: var(--text-secondary);
+  font-size: 0.8rem;
+  color: var(--text-light-muted);
 }
 
 .availDot {
   width: 7px;
   height: 7px;
-  background: #4ade80;
+  background: var(--accent);
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 680px) {
   .container {
     padding: 0 1.5rem;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .contactCard {
-    padding: 1.25rem;
   }
 }

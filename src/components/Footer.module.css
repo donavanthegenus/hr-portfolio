@@ -1,6 +1,6 @@
 .footer {
-  background: var(--bg-primary);
-  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 2rem 0;
 }
 
@@ -17,18 +17,14 @@
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--text-primary);
-}
-
-.dot {
-  color: var(--accent);
+  color: var(--text-light);
 }
 
 .copy {
-  font-size: 0.78rem;
-  color: var(--text-muted);
+  font-size: 0.75rem;
+  color: var(--text-light-muted);
 }
 
 .links {
@@ -37,8 +33,11 @@
 }
 
 .links a {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-light-muted);
   text-decoration: none;
   transition: color 0.2s;
 }

@@ -1,7 +1,7 @@
 .about {
+  background: var(--bg-lighter);
   padding: 7rem 0;
-  background: var(--bg-primary);
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--divider);
 }
 
 .container {
@@ -11,46 +11,45 @@
 }
 
 .sectionLabel {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--teal);
   margin-bottom: 1rem;
 }
 
 .heading {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--text-dark);
   margin-bottom: 3.5rem;
 }
 
-.accent {
-  color: var(--accent);
+.heading em {
   font-style: italic;
+  color: var(--teal);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 5rem;
   align-items: start;
 }
 
 .headshotCol {
   position: sticky;
-  top: 6rem;
+  top: 80px;
 }
 
 .headshotWrapper {
-  width: 240px;
-  height: 300px;
+  width: 220px;
+  height: 275px;
   overflow: hidden;
-  border: 1px solid var(--border-subtle);
-  position: relative;
+  border: 1px solid var(--divider);
 }
 
 .headshot {
@@ -59,37 +58,41 @@
   object-fit: cover;
   object-position: center top;
   display: block;
-  filter: grayscale(20%);
 }
 
 .bio p {
-  color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: 0.97rem;
   line-height: 1.85;
-  margin-bottom: 1.5rem;
+  color: var(--text-mid);
+  margin-bottom: 1.4rem;
 }
 
-.highlights {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+.skills {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--divider);
 }
 
-.highlight {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  color: var(--text-secondary);
-  font-size: 0.93rem;
+.skillRow {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--divider);
+  align-items: baseline;
+}
+
+.skillLabel {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.skillText {
+  font-size: 0.9rem;
+  color: var(--text-mid);
   line-height: 1.6;
-}
-
-.highlightIcon {
-  color: var(--accent);
-  font-size: 0.4rem;
-  flex-shrink: 0;
-  margin-top: 0.5rem;
 }
 
 @media (max-width: 900px) {
@@ -103,8 +106,8 @@
   }
 
   .headshotWrapper {
-    width: 160px;
-    height: 200px;
+    width: 150px;
+    height: 185px;
   }
 
   .container {

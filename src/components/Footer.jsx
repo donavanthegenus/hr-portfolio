@@ -6,12 +6,10 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
-        <div className={styles.logo}>
-          DJT<span className={styles.dot}>.</span>
-        </div>
+        <span className={styles.logo}>Donavan Jax Thegenus</span>
 
         <p className={styles.copy}>
-          &copy; {year} Donavan Jax Thegenus. Built with React &amp; the Anthropic Claude API.
+          &copy; {year} &mdash; Built with React &amp; the Anthropic Claude API
         </p>
 
         <div className={styles.links}>

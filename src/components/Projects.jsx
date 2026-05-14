@@ -171,10 +171,11 @@ export default function Projects() {
 
               <h3 className={styles.cardTitle}>HR Policy Chatbot</h3>
               <p className={styles.cardDesc}>
-                An AI-powered chatbot that answers employee policy questions in real time using
-                Retrieval-Augmented Generation (RAG) architecture. Employees get instant, accurate
-                answers to HR questions — reducing ticket volume and freeing up the HR team for
-                higher-value work.
+                Every day, employees have questions they need answers to quickly. Whether it is about
+                their PTO balance, their parental leave options, or what happens if they need to take
+                time off for a family emergency, waiting on HR creates friction and anxiety. This
+                chatbot answers those questions instantly, grounded in real company policy, so
+                employees feel informed and supported at any hour.
               </p>
 
               <div className={styles.tags}>
@@ -223,10 +224,10 @@ export default function Projects() {
 
               <h3 className={styles.cardTitle}>HR Metrics Dashboard</h3>
               <p className={styles.cardDesc}>
-                An enterprise-grade people analytics dashboard that visualizes key HR metrics including
-                turnover, retention, time-to-fill, and employee satisfaction. Features an AI Insights
-                panel powered by the Claude API with two views — Plain English for any manager or
-                business leader, and HR Professional for people analytics practitioners.
+                Behind every data point on this dashboard is a person. A turnover number represents
+                someone who left. A satisfaction score represents how a team of real people feel about
+                coming to work. This dashboard was built to help HR leaders see those stories in the
+                data and act on them before they become bigger problems.
               </p>
 
               <div className={styles.tags}>

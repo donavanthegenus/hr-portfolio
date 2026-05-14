@@ -1,78 +1,55 @@
 .projects {
   padding: 7rem 0;
   background: var(--bg-primary);
-  position: relative;
-}
-
-.projects::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
 
 .sectionLabel {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 1rem;
 }
 
 .heading {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 3.5rem;
 }
 
 .accent {
   color: var(--accent);
+  font-style: italic;
 }
 
 .cardsStack {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 /* ── Card shell ── */
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 20px;
   padding: 2.5rem;
   position: relative;
-  overflow: hidden;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), #a78bfa);
-  border-radius: 20px 20px 0 0;
+  transition: border-color 0.25s;
 }
 
 .card:hover {
-  border-color: var(--border);
-  box-shadow: 0 0 50px rgba(108, 99, 255, 0.1);
+  border-color: var(--border-amber);
 }
 
 .cardHeader {
@@ -92,15 +69,14 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(74, 222, 128, 0.1);
-  border: 1px solid rgba(74, 222, 128, 0.25);
+  background: rgba(74, 222, 128, 0.07);
+  border: 1px solid rgba(74, 222, 128, 0.2);
   color: #4ade80;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.3rem 0.7rem;
-  border-radius: 100px;
+  padding: 0.25rem 0.65rem;
 }
 
 .statusDot {
@@ -108,17 +84,12 @@
   height: 5px;
   background: #4ade80;
   border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
 }
 
 .cardCategory {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
+  letter-spacing: 0.04em;
 }
 
 .extLink {
@@ -126,29 +97,27 @@
   display: flex;
   align-items: center;
   padding: 0.4rem;
-  border-radius: 8px;
-  transition: color 0.2s, background 0.2s;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .extLink:hover {
   color: var(--accent);
-  background: var(--accent-dim);
 }
 
 .cardTitle {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.75rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .cardDesc {
   color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 0.97rem;
+  line-height: 1.8;
   margin-bottom: 1.5rem;
   max-width: 700px;
 }
@@ -161,20 +130,19 @@
 }
 
 .tag {
-  background: var(--bg-primary);
+  background: transparent;
   border: 1px solid var(--border-subtle);
-  color: var(--text-secondary);
-  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
   font-weight: 500;
-  font-family: 'Space Grotesk', monospace;
-  padding: 0.3rem 0.75rem;
-  border-radius: 6px;
+  font-family: 'Inter', monospace;
+  padding: 0.25rem 0.7rem;
+  letter-spacing: 0.03em;
 }
 
 /* ── Screenshot preview ── */
 .previewWrap {
   border: 1px solid var(--border-subtle);
-  border-radius: 14px;
   overflow: hidden;
   margin-bottom: 1.75rem;
 }
@@ -184,8 +152,8 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.6rem 1rem;
-  background: #1a1f2e;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  background: #111111;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .browserDots {
@@ -196,8 +164,8 @@
 
 .browserDot {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
 }
 
@@ -206,12 +174,11 @@
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  border-radius: 6px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.72rem;
-  font-family: 'Space Grotesk', monospace;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  padding: 0.22rem 0.7rem;
+  font-size: 0.7rem;
+  font-family: 'Inter', monospace;
   color: var(--text-muted);
   overflow: hidden;
   white-space: nowrap;
@@ -223,12 +190,11 @@
   overflow: hidden;
 }
 
-/* typing indicator dots in chatbot preview */
 .typingDot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background: rgba(148, 163, 184, 0.4);
+  background: rgba(163, 163, 163, 0.4);
   animation: typingBounce 1.2s ease-in-out infinite;
   flex-shrink: 0;
 }
@@ -245,24 +211,22 @@
   justify-content: center;
   gap: 0.6rem;
   width: 100%;
-  background: var(--accent);
-  color: #fff;
+  background: transparent;
+  color: var(--accent);
   font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
   padding: 0.85rem 1.5rem;
-  border-radius: 10px;
+  border: 1px solid var(--accent);
   text-decoration: none;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 22px rgba(108, 99, 255, 0.32);
-  transition: opacity 0.2s, box-shadow 0.2s, transform 0.15s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .ctaButton:hover {
-  opacity: 0.92;
-  box-shadow: 0 6px 30px rgba(108, 99, 255, 0.52);
-  transform: translateY(-2px);
+  background: var(--accent);
+  color: #000;
 }
 
 /* ── Card footer ── */
@@ -282,24 +246,27 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  background: var(--bg-primary);
+  background: #111111;
   border: 1px solid var(--border-subtle);
-  padding: 0.35rem 0.75rem;
-  border-radius: 8px;
+  padding: 0.3rem 0.7rem;
 }
 
 .archIcon {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .archArrow {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 @media (max-width: 600px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
   .card {
     padding: 1.5rem;
   }

@@ -35,7 +35,7 @@ export default function Highlights() {
 
         <div className={styles.grid}>
           {items.map((item, i) => (
-            <div key={i} className={styles.card} style={{ animationDelay: `${i * 0.08}s` }}>
+            <div key={i} className={styles.card}>
               <div className={styles.emoji}>{item.emoji}</div>
               <p className={styles.text}>{item.text}</p>
             </div>

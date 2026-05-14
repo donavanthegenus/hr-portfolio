@@ -24,67 +24,63 @@ function BrowserChrome({ url }) {
 
 function DashboardPreviewScreen() {
   const kpis = [
-    { label: 'Turnover Rate', val: '8.4%', color: '#f97316' },
-    { label: 'Retention', val: '91.6%', color: '#22c55e' },
-    { label: 'Time-to-Fill', val: '27d', color: '#3b82f6' },
-    { label: 'Satisfaction', val: '7.8 / 10', color: '#a78bfa' },
-    { label: 'Headcount', val: '1,247', color: '#06b6d4' },
-    { label: 'eNPS Score', val: '+32', color: '#4ade80' },
+    { label: 'Turnover Rate', val: '8.4%', color: '#F59E0B' },
+    { label: 'Retention', val: '91.6%', color: '#a3a3a3' },
+    { label: 'Time-to-Fill', val: '27d', color: '#F59E0B' },
+    { label: 'Satisfaction', val: '7.8 / 10', color: '#a3a3a3' },
+    { label: 'Headcount', val: '1,247', color: '#F59E0B' },
+    { label: 'eNPS Score', val: '+32', color: '#a3a3a3' },
   ]
   const bars = [
-    { h: 38, c: '#3b82f6' }, { h: 52, c: '#8b5cf6' }, { h: 30, c: '#06b6d4' },
-    { h: 47, c: '#3b82f6' }, { h: 40, c: '#8b5cf6' }, { h: 56, c: '#06b6d4' },
+    { h: 38, c: '#F59E0B' }, { h: 52, c: '#525252' }, { h: 30, c: '#F59E0B' },
+    { h: 47, c: '#525252' }, { h: 40, c: '#F59E0B' }, { h: 56, c: '#525252' },
   ]
   return (
-    <div className={styles.previewScreen} style={{ background: '#080c14' }}>
-      {/* Simulated header */}
-      <div style={{ height: 44, background: '#0b1120', borderBottom: '1px solid rgba(148,163,184,0.07)', display: 'flex', alignItems: 'center', padding: '0 18px', gap: 10 }}>
-        <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#3b82f6', boxShadow: '0 0 8px #3b82f6', flexShrink: 0 }} />
-        <div style={{ width: 110, height: 7, borderRadius: 4, background: 'rgba(148,163,184,0.18)' }} />
+    <div className={styles.previewScreen} style={{ background: '#111111' }}>
+      <div style={{ height: 40, background: '#0a0a0a', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', padding: '0 18px', gap: 10 }}>
+        <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#F59E0B', flexShrink: 0 }} />
+        <div style={{ width: 110, height: 6, borderRadius: 2, background: 'rgba(255,255,255,0.1)' }} />
         <div style={{ flex: 1 }} />
-        <div style={{ width: 54, height: 22, borderRadius: 6, background: 'rgba(148,163,184,0.05)', border: '1px solid rgba(148,163,184,0.1)' }} />
-        <div style={{ width: 76, height: 22, borderRadius: 6, background: 'rgba(148,163,184,0.05)', border: '1px solid rgba(148,163,184,0.1)' }} />
+        <div style={{ width: 54, height: 20, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }} />
+        <div style={{ width: 76, height: 20, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }} />
       </div>
 
-      {/* KPI row */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gap: 7, padding: '12px 18px 0' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gap: 6, padding: '12px 18px 0' }}>
         {kpis.map(k => (
-          <div key={k.label} style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(148,163,184,0.06)', borderRadius: 8, padding: '8px 10px' }}>
-            <div style={{ fontSize: 8, color: 'rgba(148,163,184,0.45)', marginBottom: 5, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontFamily: 'Inter, sans-serif' }}>{k.label}</div>
-            <div style={{ fontSize: 12, fontWeight: 700, color: k.color, fontFamily: 'Inter, sans-serif', letterSpacing: '-0.01em' }}>{k.val}</div>
+          <div key={k.label} style={{ background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.06)', padding: '8px 10px' }}>
+            <div style={{ fontSize: 8, color: 'rgba(163,163,163,0.5)', marginBottom: 5, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontFamily: 'Inter, sans-serif' }}>{k.label}</div>
+            <div style={{ fontSize: 12, fontWeight: 700, color: k.color, fontFamily: 'Inter, sans-serif' }}>{k.val}</div>
           </div>
         ))}
       </div>
 
-      {/* Charts row */}
-      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 7, padding: '7px 18px' }}>
-        <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(148,163,184,0.06)', borderRadius: 10, padding: '10px 14px' }}>
-          <div style={{ width: 120, height: 6, borderRadius: 3, background: 'rgba(148,163,184,0.15)', marginBottom: 10 }} />
-          <svg width="100%" height="64" viewBox="0 0 320 64" preserveAspectRatio="none">
+      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 6, padding: '6px 18px' }}>
+        <div style={{ background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.06)', padding: '10px 14px' }}>
+          <div style={{ width: 120, height: 5, borderRadius: 2, background: 'rgba(255,255,255,0.1)', marginBottom: 10 }} />
+          <svg width="100%" height="60" viewBox="0 0 320 60" preserveAspectRatio="none">
             <defs>
               <linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.22" />
-                <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
+                <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.2" />
+                <stop offset="100%" stopColor="#F59E0B" stopOpacity="0" />
               </linearGradient>
             </defs>
-            <path d="M0 48 C25 46 45 54 75 40 S125 24 160 30 S210 44 245 32 S280 16 320 20" fill="none" stroke="#3b82f6" strokeWidth="1.8" />
-            <path d="M0 48 C25 46 45 54 75 40 S125 24 160 30 S210 44 245 32 S280 16 320 20 L320 64 L0 64 Z" fill="url(#lg1)" />
+            <path d="M0 44 C25 42 45 50 75 36 S125 20 160 26 S210 40 245 28 S280 12 320 16" fill="none" stroke="#F59E0B" strokeWidth="1.5" />
+            <path d="M0 44 C25 42 45 50 75 36 S125 20 160 26 S210 40 245 28 S280 12 320 16 L320 60 L0 60 Z" fill="url(#lg1)" />
           </svg>
         </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(148,163,184,0.06)', borderRadius: 10, padding: '10px 14px' }}>
-          <div style={{ width: 80, height: 6, borderRadius: 3, background: 'rgba(148,163,184,0.15)', marginBottom: 10 }} />
-          <svg width="100%" height="64" viewBox="0 0 148 64">
+        <div style={{ background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.06)', padding: '10px 14px' }}>
+          <div style={{ width: 80, height: 5, borderRadius: 2, background: 'rgba(255,255,255,0.1)', marginBottom: 10 }} />
+          <svg width="100%" height="60" viewBox="0 0 148 60">
             {bars.map((b, i) => (
-              <rect key={i} x={i * 22 + 4} y={64 - b.h} width="15" height={b.h} rx="3" fill={b.c} opacity="0.65" />
+              <rect key={i} x={i * 22 + 4} y={60 - b.h} width="14" height={b.h} fill={b.c} opacity="0.7" />
             ))}
           </svg>
         </div>
       </div>
 
-      {/* Action row */}
       <div style={{ padding: '6px 18px 14px', display: 'flex', gap: 8 }}>
-        <div style={{ height: 28, width: 116, borderRadius: 8, background: 'linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(139,92,246,0.2) 100%)', border: '1px solid rgba(59,130,246,0.18)' }} />
-        <div style={{ height: 28, width: 84, borderRadius: 8, background: 'rgba(148,163,184,0.04)', border: '1px solid rgba(148,163,184,0.08)' }} />
+        <div style={{ height: 26, width: 116, background: 'rgba(245,158,11,0.12)', border: '1px solid rgba(245,158,11,0.2)' }} />
+        <div style={{ height: 26, width: 84, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }} />
       </div>
     </div>
   )
@@ -92,51 +88,45 @@ function DashboardPreviewScreen() {
 
 function ChatbotPreviewScreen() {
   return (
-    <div className={styles.previewScreen} style={{ background: '#0a0a0f' }}>
-      {/* Chat header */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 16px', background: 'rgba(255,255,255,0.025)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-        <div style={{ width: 34, height: 34, borderRadius: 9, background: 'rgba(108,99,255,0.18)', border: '1px solid rgba(108,99,255,0.28)', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(108,99,255,0.9)">
+    <div className={styles.previewScreen} style={{ background: '#111111' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 16px', background: '#0a0a0a', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div style={{ width: 32, height: 32, background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.2)', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(245,158,11,0.8)">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
           </svg>
         </div>
         <div>
-          <div style={{ width: 82, height: 7, borderRadius: 3, background: 'rgba(240,240,245,0.25)', marginBottom: 6 }} />
+          <div style={{ width: 82, height: 6, background: 'rgba(255,255,255,0.2)', marginBottom: 6 }} />
           <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-            <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#4ade80', boxShadow: '0 0 6px rgba(74,222,128,0.7)' }} />
-            <div style={{ width: 96, height: 5, borderRadius: 3, background: 'rgba(148,163,184,0.15)' }} />
+            <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#4ade80' }} />
+            <div style={{ width: 96, height: 5, background: 'rgba(163,163,163,0.15)' }} />
           </div>
         </div>
       </div>
 
-      {/* Messages */}
       <div style={{ padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: 10 }}>
-        {/* User */}
         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <div style={{ background: '#6c63ff', borderRadius: '14px 4px 14px 14px', padding: '9px 14px', maxWidth: '72%' }}>
-            <div style={{ width: 138, height: 6, borderRadius: 3, background: 'rgba(255,255,255,0.5)', marginBottom: 5 }} />
-            <div style={{ width: 88, height: 6, borderRadius: 3, background: 'rgba(255,255,255,0.35)' }} />
+          <div style={{ background: '#F59E0B', padding: '9px 14px', maxWidth: '72%' }}>
+            <div style={{ width: 138, height: 6, background: 'rgba(0,0,0,0.35)', marginBottom: 5 }} />
+            <div style={{ width: 88, height: 6, background: 'rgba(0,0,0,0.25)' }} />
           </div>
         </div>
-        {/* Bot */}
         <div style={{ display: 'flex', gap: 8 }}>
-          <div style={{ width: 26, height: 26, borderRadius: 7, background: 'rgba(108,99,255,0.15)', border: '1px solid rgba(108,99,255,0.22)', flexShrink: 0 }} />
-          <div style={{ background: 'rgba(255,255,255,0.035)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '4px 14px 14px 14px', padding: '9px 14px', maxWidth: '82%' }}>
-            <div style={{ width: '92%', height: 6, borderRadius: 3, background: 'rgba(148,163,184,0.2)', marginBottom: 5 }} />
-            <div style={{ width: '78%', height: 6, borderRadius: 3, background: 'rgba(148,163,184,0.15)', marginBottom: 5 }} />
-            <div style={{ width: '55%', height: 6, borderRadius: 3, background: 'rgba(148,163,184,0.1)' }} />
+          <div style={{ width: 26, height: 26, background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.18)', flexShrink: 0 }} />
+          <div style={{ background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.07)', padding: '9px 14px', maxWidth: '82%' }}>
+            <div style={{ width: '92%', height: 6, background: 'rgba(163,163,163,0.2)', marginBottom: 5 }} />
+            <div style={{ width: '78%', height: 6, background: 'rgba(163,163,163,0.15)', marginBottom: 5 }} />
+            <div style={{ width: '55%', height: 6, background: 'rgba(163,163,163,0.1)' }} />
           </div>
         </div>
-        {/* User */}
         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <div style={{ background: '#6c63ff', borderRadius: '14px 4px 14px 14px', padding: '9px 14px', maxWidth: '58%' }}>
-            <div style={{ width: 106, height: 6, borderRadius: 3, background: 'rgba(255,255,255,0.5)' }} />
+          <div style={{ background: '#F59E0B', padding: '9px 14px', maxWidth: '58%' }}>
+            <div style={{ width: 106, height: 6, background: 'rgba(0,0,0,0.3)' }} />
           </div>
         </div>
-        {/* Typing */}
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-          <div style={{ width: 26, height: 26, borderRadius: 7, background: 'rgba(108,99,255,0.15)', border: '1px solid rgba(108,99,255,0.22)', flexShrink: 0 }} />
-          <div style={{ background: 'rgba(255,255,255,0.035)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '4px 14px 14px 14px', padding: '10px 14px', display: 'flex', gap: 5, alignItems: 'center' }}>
+          <div style={{ width: 26, height: 26, background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.18)', flexShrink: 0 }} />
+          <div style={{ background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.07)', padding: '10px 14px', display: 'flex', gap: 5, alignItems: 'center' }}>
             <div className={styles.typingDot} />
             <div className={styles.typingDot} style={{ animationDelay: '0.2s' }} />
             <div className={styles.typingDot} style={{ animationDelay: '0.4s' }} />
@@ -144,12 +134,11 @@ function ChatbotPreviewScreen() {
         </div>
       </div>
 
-      {/* Input bar */}
       <div style={{ margin: '0 16px 14px', display: 'flex', gap: 8, alignItems: 'center' }}>
-        <div style={{ flex: 1, height: 34, borderRadius: 9, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', padding: '0 12px' }}>
-          <div style={{ width: 160, height: 6, borderRadius: 3, background: 'rgba(148,163,184,0.12)' }} />
+        <div style={{ flex: 1, height: 32, background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', padding: '0 12px' }}>
+          <div style={{ width: 160, height: 5, background: 'rgba(163,163,163,0.12)' }} />
         </div>
-        <div style={{ width: 34, height: 34, borderRadius: 9, background: '#6c63ff', flexShrink: 0, boxShadow: '0 0 14px rgba(108,99,255,0.45)' }} />
+        <div style={{ width: 32, height: 32, background: '#F59E0B', flexShrink: 0 }} />
       </div>
     </div>
   )
